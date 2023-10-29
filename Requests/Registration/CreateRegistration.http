@@ -1,0 +1,12 @@
+POST http://localhost:5250/Registration
+Content-Type: application/json
+
+{
+    "UserName": "Mahdi_Mohamadiha",
+    "Password": "mahdi4321",
+    "FirstName": "Mahdi",
+    "LastName": "Mohamadiha",
+    "City": "Qazvin",
+    "PhoneNumber": "09109935732",
+    "BirthDate": "2002-07-28"
+}

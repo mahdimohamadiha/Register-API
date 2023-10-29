@@ -1,0 +1,14 @@
+@id=00000000-0000-0000-0000-000000000000
+
+PUT http://localhost:5250/Registration/{{id}}
+Content-Type: application/json
+
+{
+    "UserName": "Mahdi_Mohamadiha",
+    "Password": "mahdi4321",
+    "FirstName": "Mahdi",
+    "LastName": "Mohamadiha",
+    "City": "Qazvin",
+    "PhoneNumber": "09109935732",
+    "BirthDate": "2002-07-28"
+}

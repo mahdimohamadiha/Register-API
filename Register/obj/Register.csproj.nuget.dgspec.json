@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\.NET\\.NET API\\Register\\Register\\Register.csproj": {}
+    "D:\\.NET\\.NET API\\Register\\Register\\Register.csproj": {}
   },
   "projects": {
-    "d:\\.NET\\.NET API\\Register\\Register\\Register.csproj": {
+    "D:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\.NET\\.NET API\\Register\\Register\\Register.csproj",
-        "projectName": "Register",
-        "projectPath": "d:\\.NET\\.NET API\\Register\\Register\\Register.csproj",
+        "projectUniqueName": "D:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj",
+        "projectName": "Register.Contracts",
+        "projectPath": "D:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj",
         "packagesPath": "C:\\Users\\Mahdi Mohamadiha\\.nuget\\packages\\",
-        "outputPath": "d:\\.NET\\.NET API\\Register\\Register\\obj\\",
+        "outputPath": "D:\\.NET\\.NET API\\Register\\Register.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mahdi Mohamadiha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,16 +39,66 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[7.0.9, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.5.0, )"
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
             }
           },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\.NET\\.NET API\\Register\\Register\\Register.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\.NET\\.NET API\\Register\\Register\\Register.csproj",
+        "projectName": "Register",
+        "projectPath": "D:\\.NET\\.NET API\\Register\\Register\\Register.csproj",
+        "packagesPath": "C:\\Users\\Mahdi Mohamadiha\\.nuget\\packages\\",
+        "outputPath": "D:\\.NET\\.NET API\\Register\\Register\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Mahdi Mohamadiha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj": {
+                "projectPath": "D:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",

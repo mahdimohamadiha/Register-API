@@ -1,0 +1,12 @@
+D:\.NET\.NET API\Register\Register.Contracts\bin\Debug\net7.0\Register.Contracts.deps.json
+D:\.NET\.NET API\Register\Register.Contracts\bin\Debug\net7.0\Register.Contracts.dll
+D:\.NET\.NET API\Register\Register.Contracts\bin\Debug\net7.0\Register.Contracts.pdb
+D:\.NET\.NET API\Register\Register.Contracts\obj\Debug\net7.0\Register.Contracts.csproj.AssemblyReference.cache
+D:\.NET\.NET API\Register\Register.Contracts\obj\Debug\net7.0\Register.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\.NET\.NET API\Register\Register.Contracts\obj\Debug\net7.0\Register.Contracts.AssemblyInfoInputs.cache
+D:\.NET\.NET API\Register\Register.Contracts\obj\Debug\net7.0\Register.Contracts.AssemblyInfo.cs
+D:\.NET\.NET API\Register\Register.Contracts\obj\Debug\net7.0\Register.Contracts.csproj.CoreCompileInputs.cache
+D:\.NET\.NET API\Register\Register.Contracts\obj\Debug\net7.0\Register.Contracts.dll
+D:\.NET\.NET API\Register\Register.Contracts\obj\Debug\net7.0\refint\Register.Contracts.dll
+D:\.NET\.NET API\Register\Register.Contracts\obj\Debug\net7.0\Register.Contracts.pdb
+D:\.NET\.NET API\Register\Register.Contracts\obj\Debug\net7.0\ref\Register.Contracts.dll
