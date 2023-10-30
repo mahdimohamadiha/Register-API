@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.NET\\.NET API\\Register\\Register\\Register.csproj": {}
+    "d:\\.NET\\.NET API\\Register\\Register\\Register.csproj": {}
   },
   "projects": {
-    "D:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj": {
+    "d:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj",
+        "projectUniqueName": "d:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj",
         "projectName": "Register.Contracts",
-        "projectPath": "D:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj",
+        "projectPath": "d:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj",
         "packagesPath": "C:\\Users\\Mahdi Mohamadiha\\.nuget\\packages\\",
-        "outputPath": "D:\\.NET\\.NET API\\Register\\Register.Contracts\\obj\\",
+        "outputPath": "d:\\.NET\\.NET API\\Register\\Register.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mahdi Mohamadiha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,14 +59,14 @@
         }
       }
     },
-    "D:\\.NET\\.NET API\\Register\\Register\\Register.csproj": {
+    "d:\\.NET\\.NET API\\Register\\Register\\Register.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.NET\\.NET API\\Register\\Register\\Register.csproj",
+        "projectUniqueName": "d:\\.NET\\.NET API\\Register\\Register\\Register.csproj",
         "projectName": "Register",
-        "projectPath": "D:\\.NET\\.NET API\\Register\\Register\\Register.csproj",
+        "projectPath": "d:\\.NET\\.NET API\\Register\\Register\\Register.csproj",
         "packagesPath": "C:\\Users\\Mahdi Mohamadiha\\.nuget\\packages\\",
-        "outputPath": "D:\\.NET\\.NET API\\Register\\Register\\obj\\",
+        "outputPath": "d:\\.NET\\.NET API\\Register\\Register\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mahdi Mohamadiha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -84,8 +84,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj": {
-                "projectPath": "D:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj"
+              "d:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj": {
+                "projectPath": "d:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj"
               }
             }
           }

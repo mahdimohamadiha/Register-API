@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Register.Contracts.Registration;
 using Register.Models;
+using Register.Services.Registrations;
 
 namespace Register.Controllers;
 
@@ -8,10 +9,17 @@ namespace Register.Controllers;
 [Route("[controller]")]
 public class RegistrationController : ControllerBase
 {
-    [HttpPost()]
+    private readonly IRegistrationsService _registrationsService;
+
+    public RegistrationController(IRegistrationsService registrationsService)
+    {
+        _registrationsService = registrationsService;
+    }
+
+    [HttpPost]
     public IActionResult CreateRegistration(CreateRegistrationRequest request)
     {
-        var Registration = new Registration(
+        var registration = new Registration(
             Guid.NewGuid(),
             request.UserName,
             request.Password,
@@ -23,21 +31,23 @@ public class RegistrationController : ControllerBase
             DateTime.UtcNow
         );
 
+        _registrationsService.CreateRegistration(registration);
+
         var response = new RegistrationResponse(
-            Registration.Id,
-            Registration.UserName,
-            Registration.Password,
-            Registration.FirstName,
-            Registration.LastName,
-            Registration.City,
-            Registration.PhoneNumber,
-            Registration.BirthDate,
-            Registration.RegisterationDateTime
+            registration.Id,
+            registration.UserName,
+            registration.Password,
+            registration.FirstName,
+            registration.LastName,
+            registration.City,
+            registration.PhoneNumber,
+            registration.BirthDate,
+            registration.RegisterationDateTime
         );
 
         return CreatedAtAction(
             actionName: nameof(GetRegistration),
-            routeValues: new {id = Registration.Id},   
+            routeValues: new {id = registration.Id},   
             value: response);
     }
 
