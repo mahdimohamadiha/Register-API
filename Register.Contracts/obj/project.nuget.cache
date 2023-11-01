@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rK6YKw3W5ZoysRFVGtoeS3Kzo+09M5FtYWRnyoGk8FdzFQ09WwQImm+2pVhe+a+xEfjXftKNeJsJdtq7n+SDyw==",
+  "dgSpecHash": "zfR+9FfVYNAYy2eGm6t63Em+2owT7uH8k3vvutrDWs36BKe2pgzUacJQb5YzVm9K1ubqTXqCJ4m1fqN2UgZXQA==",
   "success": true,
-  "projectFilePath": "d:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj",
+  "projectFilePath": "D:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

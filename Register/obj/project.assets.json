@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "ErrorOr/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/ErrorOr.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/ErrorOr.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Register.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -15,6 +28,22 @@
     }
   },
   "libraries": {
+    "ErrorOr/1.3.0": {
+      "sha512": "Pr7fPsggiTauAXbxp8D2z/5wZvhgB1zgQ5ScsUeHrRCMT5Rzw3W6k6l1KzJPf8c0ExSSMJBLaaYiCF0hDs3EIw==",
+      "type": "package",
+      "path": "erroror/1.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "erroror.1.3.0.nupkg.sha512",
+        "erroror.nuspec",
+        "icon-square.png",
+        "lib/net6.0/ErrorOr.dll",
+        "lib/net6.0/ErrorOr.xml",
+        "lib/netstandard2.0/ErrorOr.dll",
+        "lib/netstandard2.0/ErrorOr.xml"
+      ]
+    },
     "Register.Contracts/1.0.0": {
       "type": "project",
       "path": "../Register.Contracts/Register.Contracts.csproj",
@@ -23,6 +52,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "ErrorOr >= 1.3.0",
       "Register.Contracts >= 1.0.0"
     ]
   },
@@ -32,11 +62,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\.NET\\.NET API\\Register\\Register\\Register.csproj",
+      "projectUniqueName": "D:\\.NET\\.NET API\\Register\\Register\\Register.csproj",
       "projectName": "Register",
-      "projectPath": "d:\\.NET\\.NET API\\Register\\Register\\Register.csproj",
+      "projectPath": "D:\\.NET\\.NET API\\Register\\Register\\Register.csproj",
       "packagesPath": "C:\\Users\\Mahdi Mohamadiha\\.nuget\\packages\\",
-      "outputPath": "d:\\.NET\\.NET API\\Register\\Register\\obj\\",
+      "outputPath": "D:\\.NET\\.NET API\\Register\\Register\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mahdi Mohamadiha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,8 +84,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "d:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj": {
-              "projectPath": "d:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj"
+            "D:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj": {
+              "projectPath": "D:\\.NET\\.NET API\\Register\\Register.Contracts\\Register.Contracts.csproj"
             }
           }
         }
@@ -69,6 +99,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "ErrorOr": {
+            "target": "Package",
+            "version": "[1.3.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

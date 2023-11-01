@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "EJQBxRW0I6wqvVvLCQSFrKcl37eqqyB83ZoQgjojTm4XpTHSXOc1E9TgPcVgntHo85kA7WYxSN5IA52LRpEKdw==",
+  "dgSpecHash": "8u5DzmkeLSTP6fr3Iv/XAWmXcEhWPJV/YBzOdwqN57V03KDOZuBqear+GguuqkIVeZ2eDbZY8bTCZGY3QDeKEg==",
   "success": true,
-  "projectFilePath": "d:\\.NET\\.NET API\\Register\\Register\\Register.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\.NET\\.NET API\\Register\\Register\\Register.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mahdi Mohamadiha\\.nuget\\packages\\erroror\\1.3.0\\erroror.1.3.0.nupkg.sha512"
+  ],
   "logs": []
 }

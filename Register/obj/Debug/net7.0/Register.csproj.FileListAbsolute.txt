@@ -27,3 +27,4 @@ D:\.NET\.NET API\Register\Register\obj\Debug\net7.0\refint\Register.dll
 D:\.NET\.NET API\Register\Register\obj\Debug\net7.0\Register.pdb
 D:\.NET\.NET API\Register\Register\obj\Debug\net7.0\Register.genruntimeconfig.cache
 D:\.NET\.NET API\Register\Register\obj\Debug\net7.0\ref\Register.dll
+D:\.NET\.NET API\Register\Register\bin\Debug\net7.0\ErrorOr.dll
