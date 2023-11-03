@@ -8,14 +8,18 @@ public class RegistrationsService : IRegistrationsService
 {
     private static readonly Dictionary<Guid, Registration> _registrations = new();
 
-    public void CreateRegistration(Registration register)
+    public ErrorOr<Created> CreateRegistration(Registration register)
     {
         _registrations.Add(register.Id, register);
+
+        return Result.Created;
     }
 
-    public void DeleteRegistration(Guid id)
+    public ErrorOr<Deleted> DeleteRegistration(Guid id)
     {
-         _registrations.Remove(id);
+        _registrations.Remove(id);
+
+        return Result.Deleted;
     }
 
     public ErrorOr<Registration> GetRegistration(Guid id)
@@ -27,8 +31,11 @@ public class RegistrationsService : IRegistrationsService
         return Errors.Registration.NotFound;
     }
 
-    public void UpsertRegistration(Registration registration)
+    public ErrorOr<UpsertedRegistration> UpsertRegistration(Registration registration)
     {
+        var IsNewlyCreated = !_registrations.ContainsKey(registration.Id);
         _registrations[registration.Id] = registration;
+
+        return new UpsertedRegistration(IsNewlyCreated);
     }
 }

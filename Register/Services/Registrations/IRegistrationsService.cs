@@ -6,8 +6,8 @@ namespace Register.Services.Registrations;
 
 public interface IRegistrationsService
 {
-    void CreateRegistration(Registration register);
-    void DeleteRegistration(Guid id);
+    ErrorOr<Created> CreateRegistration(Registration register);
+    ErrorOr<Deleted> DeleteRegistration(Guid id);
     ErrorOr<Registration> GetRegistration(Guid id);
-    void UpsertRegistration(Registration registration);
+    ErrorOr<UpsertedRegistration> UpsertRegistration(Registration registration);
 }

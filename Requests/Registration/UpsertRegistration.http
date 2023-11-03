@@ -1,10 +1,10 @@
-@id=f3625fdc-dbd8-4c07-b15c-9d5fb6b3f1de
+@id=1072824b-da53-4795-8ba9-2ce2fa0719a2
 
 PUT http://localhost:5250/Registration/{{id}}
 Content-Type: application/json
 
 {
-    "UserName": "Mahdi_Mohamadiha 2",
+    "UserName": "Mahdi_Mohamadiha",
     "Password": "mahdi4321",
     "FirstName": "Mahdi",
     "LastName": "Mohamadiha",

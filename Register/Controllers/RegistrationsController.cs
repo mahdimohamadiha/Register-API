@@ -19,36 +19,21 @@ public class RegistrationController : ApiController
     [HttpPost]
     public IActionResult CreateRegistration(CreateRegistrationRequest request)
     {
-        var registration = new Registration(
-            Guid.NewGuid(),
-            request.UserName,
-            request.Password,
-            request.FirstName,
-            request.LastName,
-            request.City,
-            request.PhoneNumber,
-            request.BirthDate,
-            DateTime.UtcNow
+        ErrorOr<Registration> requestToRegistrationResult = Registration.From(request);
+
+        if (requestToRegistrationResult.IsError)
+        {
+            return Problem(requestToRegistrationResult.Errors);
+        }
+
+        var registration = requestToRegistrationResult.Value;
+
+        ErrorOr<Created> createRegistrationResult = _registrationsService.CreateRegistration(registration);
+
+        return createRegistrationResult.Match(
+            created => CreatedAtGetRegistration(registration),
+            errors => Problem(errors)
         );
-
-        _registrationsService.CreateRegistration(registration);
-
-        var response = new RegistrationResponse(
-            registration.Id,
-            registration.UserName,
-            registration.Password,
-            registration.FirstName,
-            registration.LastName,
-            registration.City,
-            registration.PhoneNumber,
-            registration.BirthDate,
-            registration.RegisterationDateTime
-        );
-
-        return CreatedAtAction(
-            actionName: nameof(GetRegistration),
-            routeValues: new {id = registration.Id},   
-            value: response);
     }
 
     [HttpGet("{id:Guid}")]
@@ -58,17 +43,36 @@ public class RegistrationController : ApiController
 
         return getRegistrationResult.Match(
             registration => Ok(MapRegistrationResponse(registration)),
-            errors => Problem()
+            errors => Problem(errors)
         );
+    }
 
-        // if (getRegistrationResult.IsError && getRegistrationResult.FirstError == Errors.Registration.NotFound)
-        // {
-        //     return NotFound();
-        // }
+    [HttpPut("{id:Guid}")]
+    public IActionResult UpsertRegistration(Guid id ,UpsertRegistrationRequest request)
+    {
+        var requestToRegistrationResult = Registration.From(id, request);
+        if (requestToRegistrationResult.IsError)
+        {
+            return Problem(requestToRegistrationResult.Errors);
+        }
+        var registration = requestToRegistrationResult.Value;
+        ErrorOr<UpsertedRegistration> upsertedRegistrationResult = _registrationsService.UpsertRegistration(registration);
 
-        // var registration = getRegistrationResult.Value;
-        // RegistrationResponse response = MapRegistrationResponse(registration);
-        // return Ok(response);
+        return upsertedRegistrationResult.Match(
+            upserted => upserted.IsNewlyCreated ? CreatedAtGetRegistration(registration) : NoContent(),
+            errors => Problem(errors)
+        );
+    }
+
+    [HttpDelete("{id:Guid}")]
+    public IActionResult DeleteRegistration(Guid id)
+    {
+        ErrorOr<Deleted> deleteRegistrationResult = _registrationsService.DeleteRegistration(id);
+
+        return deleteRegistrationResult.Match(
+            deleted => NoContent(),
+            errors => Problem(errors)
+        );
     }
 
     private static RegistrationResponse MapRegistrationResponse(Registration registration)
@@ -86,28 +90,11 @@ public class RegistrationController : ApiController
         );
     }
 
-    [HttpPut("{id:Guid}")]
-    public IActionResult UpsertRegistration(Guid id ,UpsertRegistrationRequest request)
+    private IActionResult CreatedAtGetRegistration(Registration registration)
     {
-        var registration = new Registration(
-            id,
-            request.UserName,
-            request.Password,
-            request.FirstName,
-            request.LastName,
-            request.City,
-            request.PhoneNumber,
-            request.BirthDate,
-            DateTime.UtcNow
-        );
-        _registrationsService.UpsertRegistration(registration);
-        return NoContent();
-    }
-
-    [HttpDelete("{id:Guid}")]
-    public IActionResult DeleteRegistration(Guid id)
-    {
-        _registrationsService.DeleteRegistration(id);
-        return NoContent();
+        return CreatedAtAction(
+            actionName: nameof(GetRegistration),
+            routeValues: new { id = registration.Id },
+            value: MapRegistrationResponse(registration));
     }
 }
